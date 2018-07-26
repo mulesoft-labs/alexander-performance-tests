@@ -1,0 +1,3 @@
+wrk.method = "POST"
+wrk.headers["Content-Type"] = "application/json"
+wrk.body = '{ "incoming": [ "/payload/body/listAllFlightsResponse/airlineName", "/payload/body/listAllFlightsResponse/code", "/payload/body/listAllFlightsResponse/departureDate", "/payload/body/listAllFlightsResponse/destination", "/payload/body/listAllFlightsResponse/emptySeats", "/payload/body/listAllFlightsResponse/origin", "/payload/body/listAllFlightsResponse/planeType", "/payload/body/listAllFlightsResponse/price", "/attributes/protocolHeaders" ], "expected": [ "/[]/airline", "/[]/flightCode", "/[]/fromAirportCode", "/[]/toAirportCode", "/[]/departureDate", "/[]/emptySeats", "/[]/totalSeats", "/[]/price", "/[]/planeType" ] }'
