@@ -1,0 +1,406 @@
+{
+  "applicationId": "4092893a-ed11-4ac4-b875-5bf6cbd9bbb0",
+  "organizationId": "d0511ea0-a3d3-4097-a7c0-93c7ba64d362",
+  "suggestedScript": "dw 2.0 \noutput application/json\n---\n{\n  flightCode: payload.reservationCode,\n  flightNumber: payload.airlineNumber\n  departureDate: payload.date\n}",
+  "probabilitiesCutThreshold": 0.0,
+  "fieldsSelectorAlgorithm": "KUHN_MUNKRES_EDMONDS_KARP",
+  "recommendationStrategy": "DIVIDE_AND_CONQUER",
+  "suggestionStatus": "PENDING",
+  "transformId": "f11f5517-f016-4ccc-b399-c0f8d1697bf7",
+  "from": [
+    {
+      "path": "/payload/company/name",
+      "type": "String",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/location/street",
+      "type": "String",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/location/number",
+      "type": "Number",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/location/city",
+      "type": "String",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/departments/[]/name",
+      "type": "String",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/departments/[]/buildingInfo/floor",
+      "type": "Number",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/departments/[]/team/officerInChief",
+      "type": "String",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/departments/[]/team/supervisor",
+      "type": "Number",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/departments/[]/team/coordinator",
+      "type": "Number",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/employees/[]/id",
+      "type": "Number",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/employees/[]/age",
+      "type": "Number",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/employees/[]/name",
+      "type": "String",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/employees/[]/yearsAntiquity",
+      "type": "Number",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/stakeholders/[]/id",
+      "type": "String",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/stakeholders/[]/name",
+      "type": "String",
+      "optional": false
+    },
+    {
+      "path": "/payload/company/stakeholders/[]/stake",
+      "type": "String",
+      "optional": false
+    }
+  ],
+  "to": [
+    {
+      "path": "/building/street_name",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/building/street_number",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/building/city",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/building/company",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/building/floors/[]/id",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/building/floors/[]/person_in_charge",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/building/registered_persona/[]/id",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/building/registered_persona/[]/full_name",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/building/tenants/[]/id",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/building/tenants/[]/order",
+      "type": "Number",
+      "optional": true
+    }
+  ],
+  "model": "deepModels/FastText/v1",
+  "recommendationService": "fake",
+  "suggestionsWithScores": [
+    {
+      "from": "/payload/company/location/street",
+      "to": "/building/street_name"
+    },
+    {
+      "from": "/payload/company/location/number",
+      "to": "/building/street_number"
+    },
+    {
+      "from": "/payload/company/location/city",
+      "to": "/building/city"
+    },
+    {
+      "from": "/payload/company/departments/[]/buildingInfo/floor",
+      "to": "/building/floors/[]/id"
+    },
+    {
+      "from": "/payload/company/departments/[]/team/coordinator",
+      "to": "/building/floors/[]/person_in_charge"
+    },
+    {
+      "from": "/payload/company/employees/[]/id",
+      "to": "/building/tenants/[]/id"
+    },
+    {
+      "from": "/payload/company/employees/[]/age",
+      "to": "/building/tenants/[]/order"
+    },
+    {
+      "from": "/payload/company/stakeholders/[]/name",
+      "to": "/building/registered_persona/[]/full_name"
+    }
+  ],
+  "alexanderResponses": [
+    {
+      "suggestions": [
+        {
+          "from": "/company/location/number",
+          "to": [
+            {
+              "target": "/building/street_number",
+              "probability": 0.76
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "suggestions": [
+        {
+          "from": "/company/name",
+          "to": [
+            {
+              "target": "/building/street_name",
+              "probability": 0.88
+            }
+          ]
+        },
+        {
+          "from": "/company/location/street",
+          "to": [
+            {
+              "target": "/building/street_name",
+              "probability": 0.89
+            },
+            {
+              "target": "/building/city",
+              "probability": 0.49
+            }
+          ]
+        },
+        {
+          "from": "/company/location/city",
+          "to": [
+            {
+              "target": "/building/city",
+              "probability": 0.86
+            },
+            {
+              "target": "/building/street_name",
+              "probability": 0.66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "suggestions": [
+        {
+          "from": "/company/departments",
+          "to": [
+            {
+              "target": "/building/floors",
+              "probability": 0.91
+            },
+            {
+              "target": "/building/registered_persona",
+              "probability": 0.38
+            },
+            {
+              "target": "/building/tenants",
+              "probability": 0.25
+            }
+          ]
+        },
+        {
+          "from": "/company/employees",
+          "to": [
+            {
+              "target": "/building/registered_persona",
+              "probability": 0.81
+            },
+            {
+              "target": "/building/tenants",
+              "probability": 0.61
+            },
+            {
+              "target": "/building/floors",
+              "probability": 0.10
+            }
+          ]
+        },
+        {
+          "from": "/company/stakeholders",
+          "to": [
+            {
+              "target": "/building/registered_persona",
+              "probability": 0.75
+            },
+            {
+              "target": "/building/tenants",
+              "probability": 0.62
+            },
+            {
+              "target": "/building/floors",
+              "probability": 0.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "suggestions": [
+        {
+          "from": "/company/departments/[]/buildingInfo/floor",
+          "to": [
+            {
+              "target": "/building/floors/[]/id",
+              "probability": 0.78
+            },
+            {
+              "target": "/building/floors/[]/person_in_charge",
+              "probability": 0.12
+            }
+          ]
+        },
+        {
+          "from": "/company/departments/[]/team/coordinator",
+          "to": [
+            {
+              "target": "/building/floors/[]/person_in_charge",
+              "probability": 0.69
+            },
+            {
+              "target": "/building/floors/[]/id",
+              "probability": 0.06
+            }
+          ]
+        },
+        {
+          "from": "/company/departments/[]/team/supervisor",
+          "to": [
+            {
+              "target": "/building/floors/[]/person_in_charge",
+              "probability": 0.66
+            },
+            {
+              "target": "/building/floors/[]/id",
+              "probability": 0.09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "suggestions": [
+        {
+          "from": "/company/employees/[]/id",
+          "to": [
+            {
+              "target": "/building/tenants/[]/id",
+              "probability": 0.93
+            },
+            {
+              "target": "/building/tenants/[]/order",
+              "probability": 0.82
+            }
+          ]
+        },
+        {
+          "from": "/company/employees/[]/age",
+          "to": [
+            {
+              "target": "/building/tenants/[]/order",
+              "probability": 0.33
+            },
+            {
+              "target": "/building/tenants/[]/id",
+              "probability": 0.14
+            }
+          ]
+        },
+        {
+          "from": "/company/employees/[]/yearsAntiquity",
+          "to": [
+            {
+              "target": "/building/tenants/[]/order",
+              "probability": 0.24
+            },
+            {
+              "target": "/building/tenants/[]/id",
+              "probability": 0.11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "suggestions": [
+        {
+          "from": "/company/stakeholders/[]/id",
+          "to": [
+            {
+              "target": "/building/registered_persona/[]/full_name",
+              "probability": 0.44
+            }
+          ]
+        },
+        {
+          "from": "/company/stakeholders/[]/name",
+          "to": [
+            {
+              "target": "/building/registered_persona/[]/full_name",
+              "probability": 0.76
+            }
+          ]
+        },
+        {
+          "from": "/company/stakeholders/[]/stake",
+          "to": [
+            {
+              "target": "/building/registered_persona/[]/full_name",
+              "probability": 0.21
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

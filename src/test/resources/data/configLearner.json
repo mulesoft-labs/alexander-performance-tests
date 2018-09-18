@@ -1,0 +1,148 @@
+{
+  "rootDirectory": "",
+  "limit": 2000000,
+  "datasetDirectory": "src/resources/datasets/dataweave",
+  "projectName": "DeepMuleLearning",
+  "pipeline": true,
+  "classifiers": {
+    "FeedForward": {
+      "modelType": "deep",
+      "modelArchitecture": "mlp",
+      "moduleLibrary": "keras",
+      "moduleDir": "src.classifiers.feedForward",
+      "transferLearning": {},
+      "parameters": {
+        "epochs": 10000,
+        "batch_size": 32,
+        "layers": [
+          {
+            "Dense": {
+              "moduleDir": "keras.layers",
+              "parameters": {
+                "units": 128,
+                "activation": "relu",
+                "input_shape": [
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "Dropout": {
+              "moduleDir": "keras.layers",
+              "parameters": {
+                "rate": 0.2
+              }
+            }
+          },
+          {
+            "Dense": {
+              "moduleDir": "keras.layers",
+              "parameters": {
+                "units": 32,
+                "activation": "relu"
+              }
+            }
+          },
+          {
+            "Dropout": {
+              "moduleDir": "keras.layers",
+              "parameters": {
+                "rate": 0.2
+              }
+            }
+          },
+          {
+            "Dense": {
+              "moduleDir": "keras.layers",
+              "parameters": {
+                "units": 2,
+                "activation": "softmax"
+              }
+            }
+          }
+        ],
+        "optimizers": [
+          {
+            "Adam": {
+              "moduleDir": "keras.optimizers",
+              "parameters": {
+                "lr": 0.001,
+                "decay": 1e-6,
+                "amsgrad": true
+              }
+            }
+          }
+        ],
+        "loss_type": "categorical_crossentropy",
+        "metrics": [
+          "accuracy"
+        ]
+      },
+      "callbacks": {
+        "RemoteMonitor": {
+          "root": "",
+          "path": "/publish",
+          "field": "data",
+          "send_as_json": true
+        },
+        "TensorBoard": {
+          "log_dir": "./reports/tensorboard",
+          "histogram_freq": 0,
+          "write_graph": true,
+          "write_images": true
+        }
+      },
+      "scikitWrapper": true,
+      "enable": false
+    }
+  },
+  "featureExtractors": {
+    "ShallowExtractors": {
+      "moduleDir": "src.feature_extractors.ShallowExtractors",
+      "wordEmbeddingsDir": "src/resources/datasets/GoogleNews-vectors-negative300.bin",
+      "wordEmbeddingsBinary": true,
+      "parameters": {
+        "embedding_explorer": ""
+      },
+      "need_fit": false,
+      "enable": false
+    },
+    "TextFeatureExtractors": {
+      "moduleDir": "src.feature_extractors.TextFeatureExtractors",
+      "parameters": {
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 1
+      },
+      "need_fit": true,
+      "enable": false
+    }
+  },
+  "featurePreprocessors": {
+    "FeatureScalingPreprocessor": {
+      "moduleDir": "src.feature_extractors.ShallowExtractors",
+      "parameters": {
+      },
+      "enable": false
+    },
+    "FeatureNormalizationPreprocessor": {
+      "moduleDir": "src.feature_extractors.ShallowExtractors",
+      "parameters": {
+        "norm": "l2"
+      },
+      "enable": false
+    }
+  },
+  "spaceTransformers": {
+    "PCA": {
+      "moduleDir": "sklearn.decomposition",
+      "parameters": {
+        "n_components": 40
+      },
+      "enable": false
+    }
+  }
+}
