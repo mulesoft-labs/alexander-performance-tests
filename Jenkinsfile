@@ -15,7 +15,7 @@ node {
         stage("Performance") {
             withMaven(
                 // Maven installation declared in the Jenkins "Global Tool Configuration"
-                maven: 'M3',
+                maven: 'M4',
                 mavenLocalRepo: '.repository') {
                     // Run the maven build
                     sh "mvn gatling:test"
