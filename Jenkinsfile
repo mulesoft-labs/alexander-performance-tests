@@ -16,7 +16,7 @@ node {
                 env.MAVEN_CUSTOM_OPTS = "clean checkstyle:checkstyle -DskipTests"
                 env.MAVEN_SETTINGS_PATH = '.jenkins/settings.xml'
 
-                mvnHome = tool name: 'maven-3.5.2', type: 'hudson.tasks.Maven$MavenInstallation'
+                mvnHome = tool name: 'maven-3.3.9', type: 'hudson.tasks.Maven$MavenInstallation'
                 jdkHome = tool name: 'Java 8', type: 'hudson.model.JDK'
             }
 
