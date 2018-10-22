@@ -15,7 +15,7 @@ node {
                 env.MAVEN_CUSTOM_GOALS = "javadoc:javadoc install"
                 env.MAVEN_CUSTOM_OPTS = "clean checkstyle:checkstyle -DskipTests"
 
-                mvnHome = tool name: 'maven-3.5.2', type: 'hudson.tasks.Maven$MavenInstallation'
+                mvnHome = tool name: 'Maven 3', type: 'hudson.tasks.Maven$MavenInstallation'
                 jdkHome = tool name: 'Java 8', type: 'hudson.model.JDK'
             }
 
