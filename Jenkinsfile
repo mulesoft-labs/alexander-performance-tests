@@ -7,19 +7,25 @@ node {
         [$class: 'UsernamePasswordMultiBinding', credentialsId: 'sonarqube-official', passwordVariable: 'SONAR_PASS', usernameVariable: 'SONAR_USER'],
         [$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-registry', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER']
     ]) {
+            stage("Checkout") {
+                checkoutSCM(scm)
+            }
 
-        stage("Checkout") {
-            checkoutSCM(scm)
-        }
+            stage("Set Maven configuration") {
+                env.MAVEN_CUSTOM_GOALS = "javadoc:javadoc install"
+                env.MAVEN_CUSTOM_OPTS = "clean checkstyle:checkstyle -DskipTests"
+                env.MAVEN_SETTINGS_PATH = '.jenkins/settings.xml'
 
-        stage("Performance") {
-            withMaven(
-                mavenLocalRepo: '.repository') {
-                    // Run the maven build
-                    sh "mvn gatling:test"
+                mvnHome = tool name: 'maven-3.5.2', type: 'hudson.tasks.Maven$MavenInstallation'
+                jdkHome = tool name: 'Java 8', type: 'hudson.model.JDK'
+            }
 
-                }
-            gatlingArchive()
-        }
+            stage("Performance") {
+                withMaven(
+                    mavenLocalRepo: '.repository') {
+                        sh "mvn gatling:test"
+                    }
+                gatlingArchive()
+            }
     }
 }
