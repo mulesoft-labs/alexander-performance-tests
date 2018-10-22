@@ -7,27 +7,23 @@ node {
         [$class: 'UsernamePasswordMultiBinding', credentialsId: 'sonarqube-official', passwordVariable: 'SONAR_PASS', usernameVariable: 'SONAR_USER'],
         [$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-registry', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER']
     ]) {
-            stage("Checkout") {
-                checkoutSCM(scm)
+
+        stage("Checkout") {
+            checkoutSCM(scm)
+        }
+
+        stage("Performance") {
+            withMaven(
+                // Maven installation declared in the Jenkins "Global Tool Configuration"
+                maven: 'maven-3.5.2',
+                mavenSettingsConfig: '.jenkins/settings.xml',
+                mavenLocalRepo: '.repository') {
+
+              // Run the maven build
+              sh "mvn gatling:test"
+
             }
-
-            stage("Set Maven configuration") {
-                env.MAVEN_CUSTOM_GOALS = "javadoc:javadoc install"
-                env.MAVEN_CUSTOM_OPTS = "clean checkstyle:checkstyle -DskipTests"
-                env.MAVEN_SETTINGS_PATH = '.jenkins/settings.xml'
-                env.MAVEN_SETTINGS_PATH
-
-                mvnHome = tool name: 'maven-3.5.2', type: 'hudson.tasks.Maven$MavenInstallation'
-                jdkHome = tool name: 'Java 8', type: 'hudson.model.JDK'
-            }
-
-            stage("Build & Test") {
-                withEnv(["PATH=${jdkHome}/bin:${mvnHome}/bin:${env.PATH}"]) {
-                    echo sh(script: 'env|sort', returnStdout: true)
-                    sh "mvn -s ${env.MAVEN_SETTINGS_PATH} gatling:test"
-                }
-                gatlingArchive()
-            }
-
+            gatlingArchive()
+        }
     }
 }
