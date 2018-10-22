@@ -1,10 +1,4 @@
 #!/usr/bin/env groovy
-
-def name = "mozart-performance"
-
-
-
-#!/usr/bin/env groovy
 def name = "mozart-performance"
 node {
     withCredentials([
