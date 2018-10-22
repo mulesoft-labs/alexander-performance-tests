@@ -21,6 +21,7 @@ node {
             }
 
             stage("Performance") {
+                maven: 'M3',
                 withMaven(
                     mavenLocalRepo: '.repository') {
                         sh "mvn gatling:test"
