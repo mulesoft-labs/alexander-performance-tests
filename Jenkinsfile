@@ -8,6 +8,10 @@ node {
         [$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-registry', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER']
     ]) {
 
+        stage("Checkout") {
+                checkoutSCM(scm)
+        }
+
         stage("Performance") {
                 gatlingArchive()
         }
