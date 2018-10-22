@@ -15,18 +15,19 @@ node {
                 env.MAVEN_CUSTOM_GOALS = "javadoc:javadoc install"
                 env.MAVEN_CUSTOM_OPTS = "clean checkstyle:checkstyle -DskipTests"
                 env.MAVEN_SETTINGS_PATH = '.jenkins/settings.xml'
+                env.MAVEN_SETTINGS_PATH
 
-                mvnHome = tool name: 'maven-3.3.9', type: 'hudson.tasks.Maven$MavenInstallation'
+                mvnHome = tool name: 'maven-3.5.2', type: 'hudson.tasks.Maven$MavenInstallation'
                 jdkHome = tool name: 'Java 8', type: 'hudson.model.JDK'
             }
 
-            stage("Performance") {
-                maven: 'Maven 3',
-                withMaven(
-                    mavenLocalRepo: '.repository') {
-                        sh "mvn gatling:test"
-                    }
+            stage("Build & Test") {
+                withEnv(["PATH=${jdkHome}/bin:${mvnHome}/bin:${env.PATH}"]) {
+                    echo sh(script: 'env|sort', returnStdout: true)
+                    sh "mvn -s ${env.MAVEN_SETTINGS_PATH} gatling:test"
+                }
                 gatlingArchive()
             }
+
     }
 }
