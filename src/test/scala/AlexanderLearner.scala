@@ -16,7 +16,7 @@ class AlexanderLearner extends Simulation {
   }
 
   val httpConf = http
-    .baseURL("https://alexander-service.devx.msap.io")
+    .baseUrl("https://alexander-service.devx.msap.io")
     .acceptHeader("text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
     .doNotTrackHeader("1")
     .acceptLanguageHeader("en-US,en;q=0.5")
@@ -25,7 +25,7 @@ class AlexanderLearner extends Simulation {
   val users = scenario("Users").exec(Fit.fit)
 
   setUp(
-    users.inject(rampUsers(100) over (15 seconds)),
+    users.inject(rampUsers(100) during (15 seconds)),
   ).protocols(httpConf)
 
 }
