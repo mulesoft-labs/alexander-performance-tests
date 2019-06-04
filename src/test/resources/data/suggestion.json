@@ -1,206 +1,252 @@
 {
   "incoming": [
-    "/Wgb",
-    "/CbDSL",
-    "/cwUoF",
-    "/aVFTcUZaYCUTm",
-    "/xblkkSkaOrxDQHI",
-    "/V",
-    "/i",
-    "/AFyjGKUldLOuKFj",
-    "/kudHgKAxuwEmmeh",
-    "/JNn",
-    "/JeioGxzfE",
-    "/toaO",
-    "/DqtvAtRtvNd",
-    "/oqaAE",
-    "/VeR",
-    "/nI",
-    "/APMrQpoTxy",
-    "/NDmahoKawp",
-    "/ynQ",
-    "/cjOcxByPvhW",
-    "/nAkaeAXv",
-    "/HomcBGgSprTQ",
-    "/NvqtDrz",
-    "/vNSlkoUMUyqEen",
-    "/xc",
-    "/zm",
-    "/LBoxDaRQICsZOJh",
-    "/XnmlHKy",
-    "/pbtjhmAceZLL",
-    "/LqXFLhd",
-    "/FeT",
-    "/yJVIVKmCKGPhaUu",
-    "/yEHqG",
-    "/XVICkcP",
-    "/xhcoxEeIIMt",
-    "/Y",
-    "/QuMmq",
-    "/yOnKlcrOVrlDOB",
-    "/SDD",
-    "/cDmfzSe",
-    "/jdW",
-    "/XwxskFKFuAC",
-    "/OVcQWBwoeqpigsC",
-    "/PTYBbI",
-    "/AzTrDz",
-    "/LjMN",
-    "/FoBeqBt",
-    "/ZyeuBmCZdRgA",
-    "/COrhhCOmLAZJ",
-    "/dykyLKx",
-    "/QcOxkmJSVDBepYl",
-    "/zIXFJzk",
-    "/nWvfIFlRojZvLrZ",
-    "/ihtq",
-    "/gjkIpT",
-    "/XFs",
-    "/FW",
-    "/JTeeGsi",
-    "/P",
-    "/JsYPrucTHgnAU",
-    "/yOGtrvw",
-    "/UPOmyRr",
-    "/lOIHE",
-    "/YwyG",
-    "/kkCmXyQLy",
-    "/VaFPpYfMJHYkhu",
-    "/QE",
-    "/iERs",
-    "/Teagj",
-    "/f",
-    "/OqhDnPA",
-    "/umYkhmbvcgcto",
-    "/CiiyALw",
-    "/iBsTuSenKWCO",
-    "/QXEYkpbZk",
-    "/zdcxTlYAprD",
-    "/ieYKJdhZwwfO",
-    "/dsUkbET",
-    "/opDcnNkneqZAPGv",
-    "/scMLzWbiqCUvRS",
-    "/oxXwrOdxWf",
-    "/bCvYCxLlX",
-    "/eceuHRqXnLQ",
-    "/ewWztINYXcHFbJF",
-    "/WtYpaTlwRmzzL",
-    "/sVoDpiRZSHOh",
-    "/Qq",
-    "/kRukznBlnsnsz",
-    "/gXeSFaTZ",
-    "/ytNsAkrCV",
-    "/fGKq",
-    "/jKXWRWezTx",
-    "/HZbOuqQNusmIM",
-    "/LiW",
-    "/bfRy",
-    "/mbfCBoLGTcS",
-    "/LRrheXiPkzpVTUO",
-    "/RpN",
-    "/roVDugSiPCKKClR",
-    "/QuZruexJVms"
+    {
+      "path": "/payload/[]/id",
+      "type": "Number",
+      "optional": false
+    },
+    {
+      "path": "/payload/[]/name",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/payload/[]/description",
+      "type": "String",
+      "optional": true
+    }
   ],
   "expected": [
-    "/vKMPQRiPEia",
-    "/nqbrq",
-    "/sJIVIo",
-    "/mX",
-    "/yyZu",
-    "/obh",
-    "/EarKcEkR",
-    "/EZIOLIfmXO",
-    "/MoojYbrkltSF",
-    "/qlHKMH",
-    "/WgJgCm",
-    "/XzxBbiUAgQCTPga",
-    "/geTA",
-    "/hpkgj",
-    "/JdUVY",
-    "/TwCUcQZ",
-    "/juNTBCuWULoMygz",
-    "/TlialAAl",
-    "/GMWTz",
-    "/SabTTpPJmAvBnYg",
-    "/RXCDYrKbgSgbm",
-    "/C",
-    "/D",
-    "/DKZO",
-    "/qZ",
-    "/wXQahntPfSc",
-    "/QkTxa",
-    "/CkYpSPDy",
-    "/TFNoiC",
-    "/rkSUiepirH",
-    "/URLQkIzKaIpwxcG",
-    "/cnGCNaMzn",
-    "/zkFsroXvQS",
-    "/qXNjbFy",
-    "/tqYeYl",
-    "/XmgSXjjhcO",
-    "/BvbozMprwokXH",
-    "/qw",
-    "/BtLvXluPtm",
-    "/nX",
-    "/aqDzKs",
-    "/gIHDVvHWY",
-    "/KpyuyIDRbyllfl",
-    "/X",
-    "/CTincBaVztnmzF",
-    "/oXiVipSkByrEnX",
-    "/mLfj",
-    "/krZ",
-    "/NasMRBkyDGcoIxU",
-    "/ETBOXJZ",
-    "/FRO",
-    "/rvtPDIauji",
-    "/fHS",
-    "/qIWnkTGMYkbBruY",
-    "/OjAUy",
-    "/T",
-    "/mQvNV",
-    "/uuxwaeqbdFlKjA",
-    "/HvlCXEpCsgUSi",
-    "/xnMCl",
-    "/tJHP",
-    "/nDLDxtbNDvQEMMM",
-    "/l",
-    "/NsiLBgYtV",
-    "/eq",
-    "/fxuKTDdxFihXmb",
-    "/nDUoStPNaefqSj",
-    "/ivqo",
-    "/MmuvtV",
-    "/TQLqSHEtCwg",
-    "/yWdwR",
-    "/rKRIGVW",
-    "/TjezAsXKKWgp",
-    "/SZIUbV",
-    "/P",
-    "/SqXRTDtWk",
-    "/SFGXwG",
-    "/JIUnv",
-    "/XiMgYyJWr",
-    "/hByAEHAufUrXiCi",
-    "/yEPQMgiFi",
-    "/FiqvMHcu",
-    "/nhith",
-    "/OyJ",
-    "/bdRU",
-    "/VGKrMiyE",
-    "/yWbVG",
-    "/eJXlmJEmaVjD",
-    "/pD",
-    "/RkTEKWAw",
-    "/INIz",
-    "/hCklO",
-    "/xt",
-    "/dPyNhoKAdqIs",
-    "/PoPjbBliDseGmF",
-    "/LEFIQny",
-    "/PwyNFoJAKTsV",
-    "/JUsBZb",
-    "/fLMprjNLePGg",
-    "/DxSlOkQvkkR"
-  ]
+    {
+      "path": "/[]/Id",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/IsDeleted",
+      "type": "Boolean",
+      "optional": true
+    },
+    {
+      "path": "/[]/AccountId",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/IsPrivate",
+      "type": "Boolean",
+      "optional": true
+    },
+    {
+      "path": "/[]/Name",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/Description",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/StageName",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/Amount",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/Probability",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/ExpectedRevenue",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/TotalOpportunityQuantity",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/[]/CloseDate",
+      "type": "Date",
+      "optional": true
+    },
+    {
+      "path": "/[]/Type",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/NextStep",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/LeadSource",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/IsClosed",
+      "type": "Boolean",
+      "optional": true
+    },
+    {
+      "path": "/[]/IsWon",
+      "type": "Boolean",
+      "optional": true
+    },
+    {
+      "path": "/[]/ForecastCategory",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/ForecastCategoryName",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/CampaignId",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/HasOpportunityLineItem",
+      "type": "Boolean",
+      "optional": true
+    },
+    {
+      "path": "/[]/Pricebook2Id",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/OwnerId",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/CreatedDate",
+      "type": "DateTime",
+      "optional": true
+    },
+    {
+      "path": "/[]/CreatedById",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/LastModifiedDate",
+      "type": "DateTime",
+      "optional": true
+    },
+    {
+      "path": "/[]/LastModifiedById",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/SystemModstamp",
+      "type": "DateTime",
+      "optional": true
+    },
+    {
+      "path": "/[]/LastActivityDate",
+      "type": "Date",
+      "optional": true
+    },
+    {
+      "path": "/[]/FiscalQuarter",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/[]/FiscalYear",
+      "type": "Number",
+      "optional": true
+    },
+    {
+      "path": "/[]/Fiscal",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/LastViewedDate",
+      "type": "DateTime",
+      "optional": true
+    },
+    {
+      "path": "/[]/LastReferencedDate",
+      "type": "DateTime",
+      "optional": true
+    },
+    {
+      "path": "/[]/HasOpenActivity",
+      "type": "Boolean",
+      "optional": true
+    },
+    {
+      "path": "/[]/HasOverdueTask",
+      "type": "Boolean",
+      "optional": true
+    },
+    {
+      "path": "/[]/DeliveryInstallationStatus__c",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/TrackingNumber__c",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/OrderNumber__c",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/CurrentGenerators__c",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/MainCompetitors__c",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/predicted__c",
+      "type": "Boolean",
+      "optional": true
+    },
+    {
+      "path": "/[]/SalesOrderNS__c",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/sapaccountId__c",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/SAP_Sales_Order__c",
+      "type": "String",
+      "optional": true
+    },
+    {
+      "path": "/[]/fieldsToNull/[]",
+      "type": "Array"
+    }
+  ],
+  "outputType": "application/java",
+  "transformId": "0f46619f-7f01-4f83-a61e-d5432ed073ef"
 }

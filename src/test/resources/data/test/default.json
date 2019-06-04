@@ -1,0 +1,61 @@
+{
+  "scenarios": [
+    {
+      "name": "Users",
+      "task": "tokenize",
+      "threads": [
+        10,
+        20,
+        50,
+        100
+      ],
+      "domain": "34.226.240.205",
+      "port": "8889",
+      "envId": "4a3ac1cd-f058-4279-8fef-6ddb4f191ae3",
+      "orgId": "59aea87b-d207-4777-b5d3-657781643402",
+      "parentOrganizationId": "59aea87b-d207-4777-b5d3-657781643402",
+      "masterOrganizationId": "e663eb2b-631b-4fc2-baa1-7a27f952dd7e",
+      "ownerId": "0ed072f1-5a3f-4b75-8a05-32b54eb6cee7",
+      "envName": "Design"
+    }
+  ],
+  "users": [
+    {
+      "type": "constant",
+      "duration": 2,
+      "timeUnit": "seconds",
+      "rate": 0.5
+    },
+    {
+      "type": "ramp",
+      "duration": 2,
+      "timeUnit": "seconds",
+      "rate": 0.5
+    }
+  ],
+  "statsCollection": {
+    "pushStats": true,
+    "limits": {
+      "cpu": 100,
+      "memory": 100,
+      "disk": 95
+    },
+    "enabled": true,
+    "types": [
+      "Bash",
+      "Graphite",
+      "Kubernetes"
+    ],
+    "graphiteTargets": [
+      "mcm-*",
+      "hybrid-cons*",
+      "amc-ui-facade-*"
+    ],
+    "graphiteUser": "masterof@pytest.com",
+    "graphitePass": "PyTest",
+    "graphiteHost": "http://stats.stgx.msap.io",
+    "kubernetesTargets": [
+      "exchange-xapi"
+    ]
+  }
+}
