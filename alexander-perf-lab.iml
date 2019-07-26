@@ -10,6 +10,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="scala-sdk-2.12.8" level="application" />
     <orderEntry type="library" name="Maven: io.gatling.highcharts:gatling-charts-highcharts:3.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.12.8" level="project" />
     <orderEntry type="library" name="Maven: io.gatling:gatling-charts:3.1.2" level="project" />
