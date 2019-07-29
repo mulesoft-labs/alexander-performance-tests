@@ -62,15 +62,7 @@
                 <configuration>
                     <configFolder>src/main/resources</configFolder>
                     <simulationsFolder>src/main/scala</simulationsFolder>
-                    <simulationClass>Massa</simulationClass>
-                    <excludes>
-                        <param>src.test.scala.AlexanderTokenizer</param>
-                        <param>src.test.scala.AlexanderCollector</param>
-                        <param>src.test.scala.AlexanderLearner</param>
-                        <param>src.test.scala.MozartXapi</param>
-                        <param>src.test.scala.MozartRecommendationsService</param>
-                        <param>src.test.scala.Massa</param>
-                    </excludes>
+                    <runMultipleSimulations>true</runMultipleSimulations>
                 </configuration>
                 <executions>
                     <execution>
