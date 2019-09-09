@@ -1,5 +1,5 @@
-# Alexander Performance Tests
-## a.k.a Alexander The Great
+# Mozart Performance Tests
+## a.k.a Alexander The Great - a.k.a. The Unforgiven
 Here we can found the framework and definition for every performance test suite defined.
 
 # Getting started
