@@ -1,13 +1,19 @@
-# Alexander performance tests
-## a.k.a Alexander the great
-Here we can found the framework and definition for every performance test suite defined
+# Alexander Performance Tests
+## a.k.a Alexander The Great
+Here we can found the framework and definition for every performance test suite defined.
 
 # Getting started
 ## Requirements
 * JDK 1.8
 
-## Running a test
-`mvn gatling:test -Dgatling.core.simulationClass=Eastwood`
+## Running a test from local
+`mvn gatling:test -Dgatling.core.simulationClass=eastwood.testconnectivity.TestConnectivity`
+
+## Running a test remotely
+`./run_remote eastwood.testconnectivity.TestConnectivity 192.168.1.1`
+
+#### Results
+Results of the run will be located in `DATE-TIME-results.zip` in the local dir.
 
 ## Logging
 We use plain logging with structured logging, so this solution can be plugged in to a system like ELK to easily parse 
