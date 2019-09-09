@@ -7,7 +7,7 @@ Here we can found the framework and definition for every performance test suite 
 * JDK 1.8
 
 ## Running a test
-`mvn gatling:test -Dgatling.core.simulationClass=Massa`
+`mvn gatling:test -Dgatling.core.simulationClass=Eastwood`
 
 ## Logging
 We use plain logging with structured logging, so this solution can be plugged in to a system like ELK to easily parse 
@@ -15,7 +15,7 @@ important information
 
 #### Example
 ```
-Simulation Massa started...
+Simulation Eastwood started...
 
 ================================================================================
 2019-07-29 15:48:02                                           5s elapsed

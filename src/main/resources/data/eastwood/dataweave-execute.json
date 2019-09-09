@@ -1,0 +1,7 @@
+{
+  "script":"%dw 2.0\noutput application/json  \n---\n{\n  payload: 1 + 1\n}",
+  "event":{
+    "message":{},
+    "variables":{}
+  }
+}
