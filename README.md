@@ -6,14 +6,29 @@ Here we can found the framework and definition for every performance test suite 
 ## Requirements
 * JDK 1.8
 
-## Running a test from local
+## Running a test
+
+### 1. Configuration
+Configure `src/main/resources/application.properties` for all relevant variables.
+```
+eastwoodUrl: # Host where an Eastwood cluster is located
+orgId: # Organization to be used for tests. 
+```
+
+### 2.a Running locally
+* NOTE: Used for local testing, the results are not representative as they won't have a linear response time variation. 
+
 `mvn gatling:test -Dgatling.core.simulationClass=eastwood.testconnectivity.TestConnectivity`
 
-## Running a test remotely
+### 2.b Running remote
+* NOTE: Needs SSH access to the given IP and provides realistic results as it runs remote.
+
 `./run_remote eastwood.testconnectivity.TestConnectivity 192.168.1.1`
 
 #### Results
-Results of the run will be located in `DATE-TIME-results.zip` in the local dir.
+* Results of the run will be located in `DATE-TIME-results.zip` in the local dir.
+* Push final results with a proper name here: https://drive.google.com/drive/u/1/folders/1HoXSYJZ0qL6EUdWWWMwr9sY3uPPhI1ic
+* You can check the results by opening the ZIP file and searching for the `index.html` file. 
 
 ## Logging
 We use plain logging with structured logging, so this solution can be plugged in to a system like ELK to easily parse 
