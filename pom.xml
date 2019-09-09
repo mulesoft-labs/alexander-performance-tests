@@ -64,13 +64,6 @@
                     <simulationsFolder>src/main/scala</simulationsFolder>
                     <runMultipleSimulations>true</runMultipleSimulations>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

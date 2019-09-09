@@ -1,0 +1,5 @@
+{
+  "appLocation": "https://mozart-muleapp-gen-qax.s3.amazonaws.com/mysql-4.2.0-light.jar",
+  "flowName": "email_to_email",
+  "fullPath": ""
+}
