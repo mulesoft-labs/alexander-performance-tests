@@ -91,5 +91,13 @@ class Base extends Simulation {
       .body(RawFileBody("data/eastwood/metadata-mysql.json")).asJson
       .check(status.is(200)))
 
+    /**
+     * Executes a base Autocomplete request.
+     */
+    val autocomplete = exec(http("Autocomplete")
+      .post("/api/v1/organizations/" + organizationId + "/sessions/${sessionId}/autocompletion")
+      .body(RawFileBody("data/eastwood/autocomplete.json")).asJson
+      .check(status.is(200)))
+
   }
 }

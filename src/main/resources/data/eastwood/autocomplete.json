@@ -1,0 +1,18 @@
+{
+  "appLocation": "https://mozart-muleapp-gen-qax.s3.amazonaws.com/autocompletion-4.2.0-light.jar",
+  "location": "new_flow/source",
+  "fields": [
+    {
+      "providerName": "watermarkColumn",
+      "valueProviderField": "watermarkColumn"
+    },
+    {
+      "providerName": "idColumn",
+      "valueProviderField": "idColumn"
+    },
+    {
+      "providerName": "table",
+      "key":"table"
+    }
+  ]
+}
